@@ -1,4 +1,4 @@
-.container {
+/* .container {
     height: 200px;
     position: relative;
 }
@@ -7,10 +7,13 @@
     margin: 0;
     position: absolute;
     top: 50%;
+} */
+.btn {
+    display: block;
+    margin: 5px;
 }
 
-.countdown {
+#topcorner {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    right: 100px;
 }
