@@ -5,7 +5,7 @@ const button3 = document.querySelector("#button3");
 const button4 = document.querySelector("#button4");
 const timEl = document.querySelector(".time");
 
-// Countdown timer
+// Countdown timer, starts at 60 seconds
 let secondsLeft = 60;
 function setTime() {
     let timerInterval = setInterval(function () {
@@ -19,6 +19,7 @@ function setTime() {
 
 setTime();
 
+// Questions and answers, need to fix the capital letters (camel case is prefered)
 let questionAnswer = [
     {
         Question: "Choose the client-side Javascript object",
@@ -70,10 +71,6 @@ let questionAnswer = [
 
 
 
-
-
-
-
 let index = 0;
 let currentQuestion = questionAnswer[0]
 
@@ -90,7 +87,7 @@ function nextQuestion() {
 
 }
 
-    // Checking for correct answer
+    // Checking for correct answer from each button
 
     button1.addEventListener("click", function(event) {
         event.preventDefault();
