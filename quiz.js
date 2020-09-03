@@ -21,15 +21,51 @@ setTime();
 
 let questionAnswer = [
     {
-        Question: "What does HTML stand for?",
-        Answers: ["Hard to Master Language",
-            "Hat to Mister Lancaster",
-            "Have to Many Laughs",
-            "Hypertext Markup Language"
+        Question: "Choose the client-side Javascript object",
+        Answers: ["Database",
+            "Cursor",
+            "HClient",
+            "FileUpLoad"
     ],
-        CorrectAnswer: "Hypertext Markup Language"
+        CorrectAnswer: "FileUpLoad"
     }, 
+    {
+        Question: "What are varibles used for in JavaScript programs?",
+        Answers: ["Storing numbers, dates, or other values",
+        "Varying randomly",
+        "Causing high-school algebra flashbacks",
+        "None of the above"
+    ],
+        CorrectAnswer: "Storing numbers, dates, or other values"
+    },
 
+    {
+        Question: "Which of the following are capabilities of functions in JavaScript?",
+        Answers: ["Return a value",
+        "Accept parameters and return a value",
+        "Accept parameters",
+        "None of the above"
+    ],
+        CorrectAnswer: "Accept parameters"
+    },
+    {
+        Question: "Inside which HTML element do we put the JavaScript?",
+        Answers: ["<js>",
+        "<scripting>",
+        "<script>",
+        "<javascript>"
+    ],
+        CorrectAnswer: "<javascript>"
+    },
+    {
+        Question: "What does the <noscript> tag do?",
+        Answers: ["Enclose text to be displayed by non-JavaScript browsers",
+        "Prevents scripts on the page from executing",
+        "Describes certain low-budget movies",
+        "None of the above"
+    ],
+        CorrectAnswer: "Enclose text to be displayed by non-JavaScript browsers"
+    }
 ]
 
 
