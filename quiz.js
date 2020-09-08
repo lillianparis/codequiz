@@ -1,3 +1,15 @@
+// GIVEN I am taking a code quiz
+// WHEN I click the start button
+// THEN a timer starts and I am presented with a question
+// WHEN I answer a question
+// THEN I am presented with another question
+// WHEN I answer a question incorrectly
+// THEN time is subtracted from the clock
+// WHEN all questions are answered or the timer reaches 0
+// THEN the game is over
+// WHEN the game is over
+// THEN I can save my initials and score
+
 const question = document.querySelector("#question");
 const button1 = document.querySelector("#button1");
 const button2 = document.querySelector("#button2");
@@ -16,6 +28,7 @@ function setTime() {
     }
   }, 1000);
 }
+setTimeout(function() { alert("This is a timed quiz on Javascript. The timer starts at 1 minute and counts down. Each question answered wrong will result in a 10 second deduction. Press 'OK' to begin timed quiz."); }, secondsLeft);
 
 setTime();
 
@@ -98,8 +111,9 @@ for(let i = 1; i < 5; i++) {
     console.log(i)
 }
 
-// Checking for correct answer from each button
 
+
+// This is the code  srater with, I commented it out because I used a more efficient way that saves lines.
 
 // button1.addEventListener("click", function (event) {
 //   event.preventDefault();

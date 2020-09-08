@@ -8,11 +8,13 @@
     position: absolute;
     top: 50%;
 } */
+
 .btn {
     display: block;
     margin: 5px;
 }
 
+/* This style s for the timer in the top right corner */
 #topcorner {
     position: absolute;
     right: 100px;
