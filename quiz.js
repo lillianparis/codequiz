@@ -20,7 +20,7 @@ const initials = document.querySelector("#initials");
 const submit = document.querySelector("#submit-button")
 
 
-// Countdown timer, starts at 60 seconds
+// Countdown timer, starts at 60 seconds, after prompted the "ok" to start quiz...
 let secondsLeft = 60;
 function setTime() {
   let timerInterval = setInterval(function () {
@@ -38,12 +38,12 @@ setTime();
 // Questions and answers, need to fix the capital letters (camel case is prefered)
 let questionAnswer = [
   {
-    Question: "Choose the client-side Javascript object",
+    question: "Choose the client-side Javascript object",
     Answers: ["Database", "Cursor", "HClient", "FileUpLoad"],
     CorrectAnswer: "FileUpLoad",
   },
   {
-    Question: "What are varibles used for in JavaScript programs?",
+    question: "What are varibles used for in JavaScript programs?",
     Answers: [
       "Storing numbers, dates, or other values",
       "Varying randomly",
@@ -54,7 +54,7 @@ let questionAnswer = [
   },
 
   {
-    Question:
+    question:
       "Which of the following are capabilities of functions in JavaScript?",
     Answers: [
       "Return a value",
@@ -65,12 +65,12 @@ let questionAnswer = [
     CorrectAnswer: "Accept parameters",
   },
   {
-    Question: "Inside which HTML element do we put the JavaScript?",
+    question: "Inside which HTML element do we put the JavaScript?",
     Answers: ["<js>", "<scripting>", "<script>", "<javascript>"],
     CorrectAnswer: "<javascript>",
   },
   {
-    Question: "What does the <noscript> tag do?",
+    question: "What does the <noscript> tag do?",
     Answers: [
       "Enclose text to be displayed by non-JavaScript browsers",
       "Prevents scripts on the page from executing",
@@ -90,14 +90,14 @@ nextQuestion();
 // Wrap code in a function
 function nextQuestion() {
   currentQuestion = questionAnswer[index];
-  question.textContent = currentQuestion.Question;
+  question.textContent = currentQuestion.question;
   button1.textContent = currentQuestion.Answers[0];
   button2.textContent = currentQuestion.Answers[1];
   button3.textContent = currentQuestion.Answers[2];
   button4.textContent = currentQuestion.Answers[3];
 }
 
-// "this" was added to ask whic button called the function.
+// "this" was added to ask which button called the function.
 
 for (let i = 1; i < 5; i++) {
   document.querySelector("#button" + i).addEventListener("click", function (event) {
