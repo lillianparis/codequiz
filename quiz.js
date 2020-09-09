@@ -109,7 +109,7 @@ for (let i = 1; i < 5; i++) {
       secondsLeft = secondsLeft - 10;
     }
     index++;
-    if (index === questionAnswers.length) {
+    if (index === questionAnswer.length) {
       quizEnd();
     } else {
       nextQuestion();
