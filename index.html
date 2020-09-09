@@ -1,87 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
 
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="style.css" />
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <title>JavaScript Quiz</title>
-  </head>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css" />
 
-  <!-- content for the navigation bar, a nav bar was shown in the hw gif -->
+  <title>JavaScript Quiz</title>
+</head>
 
-  <body>
-    <header>
-      <div class="row">
-        <div class="col">
-          <nav class="nav">
-            <a class="nav-link active" href="highscores.html">High-Scores</a>
-          </nav>
-        </div>
-        <!-- Timer is supposed to align to the top right corner of the page -->
-        <div id="topcorner">
-          <h5 class="time"></h5>
+<!-- content for the navigation bar, a nav bar was shown in the hw gif -->
+
+<body>
+  <header>
+    <div class="row">
+      <div class="col">
+        <nav class="nav">
+          <a class="nav-link active" href="highscores.html">High-Scores</a>
+        </nav>
+      </div>
+      <!-- Timer is supposed to align to the top right corner of the page -->
+      <div id="topcorner">
+        <h5 class="time"></h5>
+      </div>
+    </div>
+  </header>
+
+  <!-- Vertical buttons, that need to be placed directly below the questions-->
+  <main>
+    <div class="row">
+      <div class="container">
+        <h1 id="question"></h1>
+      </div>
+      <!-- Four buttons correspond with the four chosen answer posibilities -->
+      <div class="container">
+        <div class="vertical-center">
+          <button id="button1" type="button" class="btn btn-primary">
+            One
+          </button>
+          <button id="button2" type="button" class="btn btn-primary">
+            Two
+          </button>
+          <button id="button3" type="button" class="btn btn-primary">
+            Three
+          </button>
+          <button id="button4" type="button" class="btn btn-primary">
+            Four
+          </button>
         </div>
       </div>
-    </header>
+    </div>
+  </main>
 
-    <!-- Vertical buttons, that need to be placed directly below the questions-->
-    <main>
-      <div class="row">
-        <div class="container">
-          <h1 id="question"></h1>
-        </div>
-        <!-- Four buttons correspond with the four chosen answer posibilities -->
-        <div class="container">
-          <div class="vertical-center">
-            <button id="button1" type="button" class="btn btn-primary">
-              One
-            </button>
-            <button id="button2" type="button" class="btn btn-primary">
-              Two
-            </button>
-            <button id="button3" type="button" class="btn btn-primary">
-              Three
-            </button>
-            <button id="button4" type="button" class="btn btn-primary">
-              Four
-            </button>
-          </div>
-        </div>
-      </div>
-    </main>
+  <div class="row justify-content-center">
+    <div class="col text-center">
+      <h2 style="padding-bottom:20px; padding-top: 20px;">Your Score is<span id="final-score"></span></h2>
+    </div>
+  </div>
+  <div id="high-scores-div" class="row justify-content-center"
+    style="display:none; padding-bottom: 20px; padding-top: 20px;">
+    <div class="col text-center" style="padding-bottom: 20px; padding-top: 20px;">
+    </div>
+  </div>
 
-    
-    <!-- Linked to JS -->
 
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-      crossorigin="anonymous"
-    ></script>
 
-    <script src="quiz.js"></script>
-  </body>
+  <h2>Enter your initials</h2>
+  <div style="padding-bottom: 20px; padding-top: 20px;">
+    <input id="initials">
+    <button type="button" id="submit-button" class="btn btn-success">button</button>
+    </input>
+
+  </div>
+  </div>
+
+  <!-- Linked to JS -->
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+
+  <script src="quiz.js"></script>
+</body>
+
 </html>

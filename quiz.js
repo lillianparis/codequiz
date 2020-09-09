@@ -16,6 +16,9 @@ const button2 = document.querySelector("#button2");
 const button3 = document.querySelector("#button3");
 const button4 = document.querySelector("#button4");
 const timeEl = document.querySelector(".time");
+const initials = document.querySelector("#initials");
+const submit = document.querySelector("#submit-button")
+
 
 // Countdown timer, starts at 60 seconds
 let secondsLeft = 60;
@@ -28,7 +31,7 @@ function setTime() {
     }
   }, 1000);
 }
-setTimeout(function() { alert("This is a timed quiz on Javascript. The timer starts at 1 minute and counts down. Each question answered wrong will result in a 10 second deduction. Press 'OK' to begin timed quiz."); }, secondsLeft);
+setTimeout(function () { alert("This is a timed quiz on Javascript. The timer starts at 1 minute and counts down. Each question answered wrong will result in a 10 second deduction. Press 'OK' to begin timed quiz."); }, secondsLeft);
 
 setTime();
 
@@ -96,20 +99,52 @@ function nextQuestion() {
 
 // "this" was added to ask whic button called the function.
 
-for(let i = 1; i < 5; i++) {
-    document.querySelector("#button" + i).addEventListener("click", function (event) {
-        event.preventDefault();
-        if (this.textContent === currentQuestion.CorrectAnswer) {
-            alert("correct");
-        } else {
-            alert("wrong");
-            secondsLeft = secondsLeft - 10;
-        }
-        index++;
-        nextQuestion();
-    });
-    console.log(i)
+for (let i = 1; i < 5; i++) {
+  document.querySelector("#button" + i).addEventListener("click", function (event) {
+    event.preventDefault();
+    if (this.textContent === currentQuestion.CorrectAnswer) {
+      alert("correct!");
+    } else {
+      alert("wrong!");
+      secondsLeft = secondsLeft - 10;
+    }
+    index++;
+    nextQuestion();
+  });
+  console.log(i)
 }
+
+// Function to end quiz 
+function quizEnd(){
+  clearInterval(timer);
+  // let endScreenE1 = document.querySelector("#congrats");
+  let finalScore = document.querySelector("#final-score");
+  let highScores = document.querySelector("#high-scores-div");
+
+  finalScore.textContent = "time left: " + secondsLeft;
+}
+
+
+
+// function to save initials and score to local storage
+function initialSave() {
+  const initials = document.querySelector("#initials");
+  let initializer = initials.nodeValue.trim();
+  if (initialier !== "") {
+    let highScores = JSON.parse(window.localStorage.getItem("high-scores") || "[]");
+
+    let newScore = {
+      score: secondsLeft,
+      initials: initializer,
+    }
+    highScores.push(newScore);
+    window.localStorage.setItem("high-scores", JSON.stringify(highScores));
+
+    window.location.href = "index.html";
+  }
+}
+
+SVGNumberList.onClick = initialSave;
 
 
 
