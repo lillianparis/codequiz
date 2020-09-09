@@ -18,12 +18,12 @@ const button4 = document.querySelector("#button4");
 const timeEl = document.querySelector(".time");
 const initials = document.querySelector("#initials");
 const submit = document.querySelector("#submit-button")
-
+let timerInterval;
 
 // Countdown timer, starts at 60 seconds, after prompted the "ok" to start quiz...
 let secondsLeft = 60;
 function setTime() {
-  let timerInterval = setInterval(function () {
+  timerInterval = setInterval(function () {
     secondsLeft--;
     timeEl.textContent = "Time Left: " + secondsLeft;
     if (secondsLeft === 0) {
@@ -120,7 +120,7 @@ for (let i = 1; i < 5; i++) {
 
 // Function to end quiz 
 function quizEnd(){
-  clearInterval(timer);
+  clearInterval(timerInterval);
   // let endScreenE1 = document.querySelector("#congrats");
   let finalScore = document.querySelector("#final-score");
   let highScores = document.querySelector("#high-scores-div");
