@@ -18,6 +18,7 @@ const button4 = document.querySelector("#button4");
 const timeEl = document.querySelector(".time");
 const initials = document.querySelector("#initials");
 const submit = document.querySelector("#submit-button");
+const questionAnswers = document.querySelector("#question-answers");
 let highScores = [];
 let timerInterval;
 
@@ -82,7 +83,7 @@ let questionAnswer = [
   },
 ];
 
-// We start at 0
+// We start at 0.
 let index = 0;
 let currentQuestion = questionAnswer[0];
 
@@ -126,6 +127,7 @@ function quizEnd(){
   let finalScore = document.querySelector("#final-score");
 
   finalScore.textContent = " " + secondsLeft;
+  questionAnswers.innerHTML = '<h2>You have finished the test enter your name to save the score '
   // console.log(finalScore)
 }
 
