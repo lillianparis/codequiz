@@ -19,3 +19,9 @@
     position: absolute;
     right: 100px;
 }
+
+/* Changes submit-button color from green to blue */
+#submit-button {
+    background-color: rgb(0, 132, 255);
+    right: 100px;
+}

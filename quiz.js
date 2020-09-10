@@ -125,6 +125,7 @@ function quizEnd(){
   let finalScore = document.querySelector("#final-score");
 
   finalScore.textContent = " " + secondsLeft;
+  // console.log(finalScore)
 }
 
 
