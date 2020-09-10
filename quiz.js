@@ -83,7 +83,7 @@ let questionAnswer = [
   },
 ];
 
-// We start at 0.
+// We start at 0
 let index = 0;
 let currentQuestion = questionAnswer[0];
 
@@ -127,7 +127,9 @@ function quizEnd(){
   let finalScore = document.querySelector("#final-score");
 
   finalScore.textContent = " " + secondsLeft;
-  questionAnswers.innerHTML = '<h2>You have finished the test enter your name to save the score '
+  console.log(questionAnswers)
+  questionAnswers.innerHTML = '<h2> You have finished the test enter your name to save the score '
+  
   // console.log(finalScore)
 }
 
