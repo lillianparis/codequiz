@@ -33,7 +33,7 @@ function setTime() {
     }
   }, 1000);
 }
-setTimeout(function () { alert("This is a timed quiz on Javascript. The timer starts at 1 minute and counts down. Each question answered wrong will result in a 10 second deduction. Press 'OK' to begin timed quiz."); }, secondsLeft);
+setTimeout(function () { alert("This is a timed quiz on Javascript, your score is based on the amount of time it takes to complete. The timer starts at 1 minute and counts down. Each question answered wrong will result in a 10 second deduction. Press 'OK' to begin timed quiz."); }, secondsLeft);
 
 setTime();
 
