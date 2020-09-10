@@ -137,6 +137,8 @@ function initialSave() {
   if (initialier !== "") {
     let highScores = JSON.parse(window.localStorage.getItem("high-scores") || "[]");
 
+    console.log(initialSave)
+
     let newScore = {
       score: secondsLeft,
       initials: initializer,
