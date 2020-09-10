@@ -121,11 +121,10 @@ for (let i = 1; i < 5; i++) {
 // Function to end quiz 
 function quizEnd(){
   clearInterval(timerInterval);
-  // let endScreenE1 = document.querySelector("#congrats");
+ 
   let finalScore = document.querySelector("#final-score");
-  let highScores = document.querySelector("#high-scores-div");
 
-  finalScore.textContent = "time left: " + secondsLeft;
+  finalScore.textContent = " " + secondsLeft;
 }
 
 
