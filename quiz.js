@@ -17,7 +17,8 @@ const button3 = document.querySelector("#button3");
 const button4 = document.querySelector("#button4");
 const timeEl = document.querySelector(".time");
 const initials = document.querySelector("#initials");
-const submit = document.querySelector("#submit-button")
+const submit = document.querySelector("#submit-button");
+let highScores = [];
 let timerInterval;
 
 // Countdown timer, starts at 60 seconds, after prompted the "ok" to start quiz...
@@ -131,26 +132,29 @@ function quizEnd(){
 
 
 // function to save initials and score to local storage
-function initialSave() {
-  const initials = document.querySelector("#initials");
-  let initializer = initials.nodeValue.trim();
-  if (initialier !== "") {
-    let highScores = JSON.parse(window.localStorage.getItem("high-scores") || "[]");
-
-    console.log(initialSave)
+function initialSave(event) { 
+ event.preventDefault();
+  const initials = document.querySelector("#initials").value; 
+  
+  // let initializer = initials.nodeValue.trim();
+  if (initials !== "") {
+    // let highScores = JSON.parse(window.localStorage.getItem("high-scores") || "[]");
+    // console.log(initialSave)
 
     let newScore = {
       score: secondsLeft,
-      initials: initializer,
+      initials: initials
     }
     highScores.push(newScore);
+    console.log(highScores)
     window.localStorage.setItem("high-scores", JSON.stringify(highScores));
 
-    window.location.href = "index.html";
+    // window.location.href = "index.html";
   }
 }
 
-SVGNumberList.onClick = initialSave;
+
+submit.addEventListener("click", initialSave)
 
 
 
