@@ -26,6 +26,12 @@
     right: 100px;
 }
 
-#h2 {
+#question-answers {
     right: 100px;
+    text-align: center;
+}
+
+high-scores {
+    text-align: center;
+
 }

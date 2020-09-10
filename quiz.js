@@ -128,7 +128,7 @@ function quizEnd(){
 
   finalScore.textContent = " " + secondsLeft;
   console.log(questionAnswers)
-  questionAnswers.innerHTML = '<h2> You have finished the test enter your name to save the score '
+  questionAnswers.innerHTML = '<h2> You have finished the test enter your name to save the score </h2>'
   
   // console.log(finalScore)
 }
