@@ -33,6 +33,7 @@ enter their initials which are saved into the local storage. At the end the user
 view their initials and their score in the console!
 
 Deployed: https://lillianparis.github.io/codequiz/
+Repository: https://github.com/lillianparis/codequiz 
 
 
 ## Installation
