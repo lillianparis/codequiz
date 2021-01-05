@@ -5,8 +5,6 @@
 
 *[Installation](#Installation) 
 
-*[usage](#usage) 
-
 *[contribution](#contribution) 
 
 *[test](#test) 
@@ -44,8 +42,6 @@ To install necessary dependencies, run the following command:
 npm install
 ```
 
-## Usage
-It's ...
 
 ## Contribution
 This repository was created by: Lillian Paris.
