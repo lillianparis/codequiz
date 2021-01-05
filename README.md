@@ -51,7 +51,7 @@ This repository was created by: Lillian Paris.
 npm test
     
 ## Username
-lillianparis
+Github: lillianparis
     
 ## Email
     lillian.paris529@gmail.com
